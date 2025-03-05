@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+    margin:0%;
+    padding: 0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/*styling the navbar / doubles as header*/
+.navbar{
+    background-color: rgb(47, 47, 71);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    position: sticky;
+    top: 0%;
+    z-index: 99;
+}
+
+.navbar_section{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px 50px;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items:center;
+    list-style: none;
+    text-align: center;
+    margin-right: auto;
+    justify-content: flex-end;
+}
+.navbar_item{
+    height: 80px;
+}
+
+.navbar_link {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: wavy;
+    padding: 0 50px;
+    height: 100%;
+}
+
+.navbar_link:hover{
+    background-color: white;
+    color: rgb(47, 47, 71);
+}
+
+.main_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* self is centering the container:  */
+    justify-self: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: width 0.5s, height 0.5s;
+}
+
+.main_container .thumbnail {
+    width: 75%;
+    height: auto;
+    border: 5px solid red;
+    background-position: center;
+    overflow: hidden;
+    object-fit: cover;
+
+}
+/* https://www.youtube.com/watch?v=bR5pmwNajjQ */
+.main_container .thumbnail img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .2s linear;
+}
+.main_container .vidPlayer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.609);
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.main_container .vidPlayer video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 720px;
+    object-fit: contain;
+}
+
+.main_container .vidPlayer span{
+position: absolute;
+top: 5px;
+right: 20px;
+font-size: 50px;
+color: red;
+font-weight: bolder;
+z-index: 100;
+cursor: pointer;
+}
+
+
+.notification {
+    position: absolute; 
+    top: 20%; /* center vertically */
+    left: 50%; /* center horizontally */
+    transform: translate(-50%, -50%); 
+    display: none; /* hidden - changed in script */
+    z-index: 10; /* appears above the video */
+}
+
+.main_container #phaserGames {
+    position: fixed;
+    /* self is centering the container:  */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1000;
+    display: none;
+    transition: 200ms ease-in-out;
+        background: rgba(0, 0, 0, 0.8); /* slighly transparent background */
+    }
+    .game-image {
+        width: 150px; 
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    #phaserGames span {
+        position: absolute;
+        top: 5px;
+right: 20px;
+font-size: 50px;
+color: red;
+font-weight: bolder;
+z-index: 9999;
+cursor: pointer;
+    }
+
+/* Fullscreen styles  */
+ :fullscreen .vidPlayer {
+    position: fixed; /* Fix position in fullscreen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+:fullscreen .vidPlayer video {
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit: contain;
+}
+
+
+@media screen and (max-width: 720px){
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        justify-content: center;
+        z-index: 1;
+        width: 100%;;
+    }
+    .main_container .vidPlayer video{
+        width: 95%;
+
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheLoopFilm</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+   <nav class="navbar">
+    <div class="nav_section">
+        <a href="/" id="nav_logo"></a>
+    <div class="nav_toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="navbar_menu">
+    <li class="navbar_item">
+    <a href="index.html" class="navbar_link"> Home </a>
+    </li>
+    <li class="navbar_item">
+    <a href="/" class="navbar_link"> About </a>
+    </li>
+    <li class="navbar_item">
+    <a href="gamePage.html" class="navbar_link"> Games </a>
+    </li>
+</ul>
+</div>
+   </nav>
+
+   <div class="main_container" id="mainContainer">
+    <!-- https://www.youtube.com/watch?v=jYuAmonOUvU&t=1s -->
+     <!-- Vid gallery initial style so it expands nicely -->
+    <div class="thumbnail" id="thumbnail">
+        <img src="Web-images/logo.png">
+    </div>
+    <div id ="vidPlayer" class="vidPlayer">
+        <span>&times;</span>
+        <video muted playsinline controls>
+
+       <source src ="video/vid1.mp4" type="video/mp4"  = "true">
+        your browser does not support the video file
+    </video>
+
+    <!-- each notification image -->
+     <img id="momNotif" class="notification" src="Web-images/momText.png" alt="clean room" style="display: none;">
+     <img id="batteryNotif" class="notification" src="Web-images/low battery.png" alt="snake game" style="display: none;">
+     <img id="blockzarNotif" class="notification" src="Web-images/Blockzar.png" alt="Blockzar game" style="display: none;">
+     <img id="samNotif" class="notification" src="Web-images/loopNotif.png" alt="Jump game" style="display: none;">
+     <img id="finalNotif" class="notification" src="Web-images/quizAlert.png" alt="Trivia quiz" style="display: none;">
+</div>
+     <div id="phaserGames"> <span>Quit</span></div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/phaser@v3.88.2/dist/phaser.js"></script> <!-- Phaser -->
+   <!-- <script type="module" src="games/breakout/breakoutConfig.js"></script> -->
+
+  <!-- <script src="gameControl.js" type="module"></script> -->
+   <script src="script.js" type="module"> </script>
+</body>
+</html>
+
+<!-- why i chose phaser https://www.geeksforgeeks.org/introduction-to-phaser-js/ -->

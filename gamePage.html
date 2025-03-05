@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheLoopFilm</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script> <!-- Phaser -->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav_section">
+            <a href="/" id="nav_logo"></a>
+            <div class="nav_toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="index.html" class="navbar_link"> Home </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/" class="navbar_link"> About </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="gamePage.html" class="navbar_link"> Games </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<!-- <button id="returnToVideo">Return to Video</button> -->
+
+
+    <script type="module" src="games/snake/snakeConfig.js"></script>
+</body>
+</html>
+
+<!-- why i chose phaser https://www.geeksforgeeks.org/introduction-to-phaser-js/ -->
